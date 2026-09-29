@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+import miFoto from '../assets/images/mi-foto.jpeg';
+import { profile } from '../data/portfolio';
+
+/**
+ * Foto de perfil. La imagen vive en src/assets/images/ y Astro la optimiza
+ * automáticamente: recorta a cuadrado, genera srcset responsive y la sirve en
+ * WebP (de ~2,7 MB a unos pocos KB).
+ */
+---
+
+<div class="relative">
+	<div
+		class="absolute -inset-3 rounded-3xl bg-linear-to-br from-violet-500/30 to-cyan-500/20 blur-2xl"
+		aria-hidden="true"
+	>
+	</div>
+	<div
+		class="relative rounded-2xl bg-linear-to-br from-violet-500/30 to-cyan-500/20 p-1 shadow-xl shadow-violet-950/50"
+	>
+		<Image
+			src={miFoto}
+			alt={`Foto de ${profile.name}`}
+			width={288}
+			height={288}
+			fit="cover"
+			position="top"
+			widths={[288, 576]}
+			sizes="(min-width: 1024px) 288px, (min-width: 640px) 224px, 192px"
+			quality={80}
+			priority
+			class="h-48 w-48 rounded-xl object-cover sm:h-56 sm:w-56 lg:h-72 lg:w-72"
+		/>
+	</div>
+</div>

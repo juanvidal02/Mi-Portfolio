@@ -1,0 +1,109 @@
+---
+import { profile } from '../data/portfolio';
+import ProfilePhoto from './ProfilePhoto.astro';
+import Icon from './Icon.astro';
+---
+
+<section
+	id="inicio"
+	class="relative mx-auto flex min-h-[calc(100vh-4.5rem)] max-w-6xl flex-col justify-center gap-12 px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
+>
+	<div class="flex flex-col lg:flex-row lg:items-center lg:gap-16">
+		<div class="mx-auto shrink-0 lg:mx-0">
+			<ProfilePhoto />
+		</div>
+
+		<div class="flex flex-col justify-center mt-8 lg:mt-0">
+			<p class="mb-4 text-sm font-medium uppercase tracking-widest text-violet-400">
+				{profile.role}
+			</p>
+			<h1 class="max-w-3xl text-4xl font-bold tracking-tight text-zinc-50 sm:text-5xl lg:text-6xl">
+				Hola, soy{' '}
+				<span
+					class="bg-linear-to-r from-violet-300 to-cyan-300 bg-clip-text text-transparent"
+				>
+					{profile.name}
+				</span>
+			</h1>
+			<p class="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400 sm:text-xl">
+				{profile.summary}
+			</p>
+			<div class="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+				<a
+					href="#proyectos"
+					class="inline-flex items-center justify-center rounded-lg bg-violet-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-900/40 transition hover:bg-violet-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-400"
+				>
+					Ver Proyectos
+				</a>
+				<a
+					href="#contacto"
+					class="inline-flex items-center justify-center rounded-lg border border-zinc-700 bg-zinc-900/50 px-6 py-3 text-sm font-semibold text-zinc-100 transition hover:border-zinc-500 hover:bg-zinc-800/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-400"
+				>
+					Contactar
+				</a>
+				<a
+					href="#skills"
+					aria-label="Bajar a la sección de tecnologías"
+					class="inline-flex items-center justify-center rounded-lg border border-zinc-800 px-4 py-3 text-zinc-400 transition hover:text-zinc-100 sm:ml-auto"
+				>
+					<Icon name="arrow-down" class="h-5 w-5 animate-bounce" />
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Dos recuadros grandes en el centro uno al lado del otro -->
+	<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-5xl mx-auto mt-4">
+		<!-- Recuadro 1: Experiencia Profesional & Desempeño -->
+		<div class="rounded-2xl border border-zinc-800 bg-zinc-900/70 p-6 sm:p-8 shadow-xl backdrop-blur-md transition hover:border-violet-500/50 flex flex-col justify-between">
+			<div>
+				<div class="flex flex-wrap items-start justify-between gap-2 mb-4">
+					<h3 class="text-sm font-bold tracking-wider uppercase text-violet-400">
+						Experiencia Profesional
+					</h3>
+					<span class="text-xs font-semibold text-zinc-400 bg-zinc-800/80 px-3 py-1 rounded-full">
+						Abril 2026 - Julio 2026
+					</span>
+				</div>
+				<div class="mb-5 space-y-1">
+					<h4 class="text-xl font-bold text-zinc-100">Full-Stack Developer</h4>
+					<p class="text-base font-semibold text-violet-300">Kids and Clouds</p>
+				</div>
+				<h5 class="text-xs font-semibold tracking-wider uppercase text-cyan-400 mb-3">
+					Desempeño y Responsabilidades
+				</h5>
+				<ul class="space-y-2.5 text-base leading-relaxed text-zinc-300 list-disc list-inside">
+					<li>Desarrollo full stack con Flutter y Dart.</li>
+					<li>Pruebas exhaustivas de las funciones de la aplicación.</li>
+					<li>Uso de Firestore para la gestión de datos en tiempo real.</li>
+					<li>Implementación de arquitecturas escalables y código limpio.</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Recuadro 2: Competencias Profesionales -->
+		<div class="rounded-2xl border border-zinc-800 bg-zinc-900/70 p-6 sm:p-8 shadow-xl backdrop-blur-md transition hover:border-cyan-500/50 flex flex-col justify-between">
+			<div>
+				<div class="flex items-start justify-between gap-2 mb-4">
+					<h3 class="text-sm font-bold tracking-wider uppercase text-cyan-400">
+						Competencias Profesionales
+					</h3>
+					<span class="text-xs font-semibold text-cyan-400/80 bg-zinc-800/80 px-3 py-1 rounded-full">
+						Skills & Logros
+					</span>
+				</div>
+				<div class="mb-5 space-y-1">
+					<h4 class="text-xl font-bold text-zinc-100">Logros e Impacto Técnico</h4>
+					<p class="text-base font-semibold text-cyan-300">Stack: Flutter, Dart, Cursor, Firestore</p>
+				</div>
+				<ul class="space-y-2.5 text-base leading-relaxed text-zinc-300 list-disc list-inside">
+					<li><strong>Desarrollo Web & Móvil:</strong> Creación de soluciones digitales eficientes y escalables.</li>
+					<li><strong>Trabajo en Equipo:</strong> Sinergia multidisciplinar y colaboración efectiva.</li>
+					<li><strong>Impacto Empresarial:</strong> Optimización de flujos y entrega de valor al usuario.</li>
+					<li><strong>Logros Destacados:</strong> Alta eficiencia en desarrollo Full-Stack e implementación de pruebas robustas.</li>
+					<li><strong>Tecnologías en Prácticas:</strong> Flutter, Dart, Cursor y Firestore.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

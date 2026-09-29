@@ -1,0 +1,39 @@
+---
+import { skills } from '../data/portfolio';
+---
+
+<section
+	id="skills"
+	class="relative border-t border-zinc-800/80 bg-zinc-900/20 py-20 sm:py-24"
+>
+	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+		<div class="max-w-2xl">
+			<h2 class="text-3xl font-bold tracking-tight text-zinc-50 sm:text-4xl">
+				Tecnologías &amp; Skills
+			</h2>
+			<p class="mt-3 text-zinc-400">
+				Stack con el que desarrollo sitios, APIs y aplicaciones móviles.
+			</p>
+		</div>
+		<ul
+			class="mt-12 grid grid-cols-2 gap-3.5 sm:grid-cols-3 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4"
+			role="list"
+		>
+			{
+				skills.map((skill) => (
+					<li
+						class={`flex items-center gap-3.5 rounded-xl border bg-linear-to-br p-4 transition-all duration-300 hover:scale-[1.02] hover:border-violet-500/40 shadow-lg ${skill.accent}`}
+					>
+						<span
+							class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-zinc-950/60 text-xs font-bold uppercase tracking-wider"
+							aria-hidden="true"
+						>
+							{skill.name.slice(0, 2)}
+						</span>
+						<span class="font-semibold tracking-wide">{skill.name}</span>
+					</li>
+				))
+			}
+		</ul>
+	</div>
+</section>
