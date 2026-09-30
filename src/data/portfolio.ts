@@ -33,7 +33,7 @@ export const profile = {
 	initials: 'JAVL',
 	role: 'Desarrollo de Aplicaciones Web y Móviles (Técnico Superior DAW)',
 	summary:
-		'Desarrollador orientado a aplicaciones web y móviles con experiencia sólida en Flutter, Laravel, PHP, Dart, Firebase y Astro. Enfocado en código limpio, arquitecturas escalables, pruebas unitarias y desarrollo asistido por IA (Claude, Cursor Pro).',
+		'Desarrollador orientado a aplicaciones web y móviles con experiencia sólida en Flutter, Dart, Firebase y Astro. Enfocado en código limpio, arquitecturas escalables, pruebas unitarias y desarrollo incluyendo la programación con IA (Windsurf y Cursor). Apasionado por la innovación tecnológica y la creación de soluciones eficientes y atractivas.',
 	location: 'Cádiz, España',
 } as const;
 
@@ -71,7 +71,7 @@ export const projects: Project[] = [
 	{
 		title: 'Cajasol x Kids and Clouds',
 		description:
-			'Landing page promocional e interactiva desarrollada en colaboración, optimizada para alto rendimiento, diseño responsive y desplegada con Astro y Tailwind CSS.',
+			'Landing page promocional e interactiva desarrollada para la colaboración de Kids and Clouds x Cajasol, optimizada para alto rendimiento, diseño responsive y desplegada con Astro y Tailwind CSS.',
 		tags: ['Astro', 'Tailwind', 'Vercel'],
 		demo: '#',
 		github: 'https://github.com/juanvidal02',
